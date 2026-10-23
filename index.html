@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+  <!-- Ask the browser / OS to lock to landscape on supported platforms -->
+  <meta name="screen-orientation" content="landscape" />
+  <title>Adventure Quest: The Lost Kingdom</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Rotate-device overlay — shown via CSS when portrait on touch devices -->
+  <div id="rotate-overlay">
+    <div id="rotate-box">
+      <div id="rotate-icon">📱</div>
+      <p>Please rotate your device<br>to <strong>landscape</strong> to play!</p>
+    </div>
+  </div>
+
+  <div id="game-container">
+    <canvas id="gameCanvas"></canvas>
+
+    <!-- Mobile Controls -->
+    <div id="mobile-controls">
+      <div id="mobile-left">
+        <button class="ctrl-btn" id="btn-left">◀</button>
+        <button class="ctrl-btn" id="btn-right">▶</button>
+      </div>
+      <div id="mobile-right">
+        <button class="ctrl-btn" id="btn-attack">⚔</button>
+        <button class="ctrl-btn" id="btn-jump">▲</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mute toggle button — always accessible -->
+  <button id="mute-btn" title="Toggle music and sound effects">🔊</button>
+
+  <script src="game.js"></script>
+</body>
+</html>
