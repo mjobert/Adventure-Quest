@@ -14,15 +14,12 @@ html, body {
 }
 
 /* ── Landscape lock for mobile/tablet ── */
-/* Try the CSS-level Screen Orientation API as a hint */
 @media screen and (orientation: landscape) {
   html { /* already landscape — nothing extra needed */ }
 }
 
-/* Show the "rotate" overlay whenever the device is in portrait
-   and is a genuine touch device (screen width < 1024 CSS-px).    */
 #rotate-overlay {
-  display: none;          /* hidden by default */
+  display: none;
   position: fixed;
   inset: 0;
   z-index: 9999;
@@ -31,7 +28,6 @@ html, body {
   justify-content: center;
 }
 
-/* JS adds class="portrait" to <html> when portrait on touch device */
 html.portrait #rotate-overlay { display: flex; }
 html.portrait #game-container  { visibility: hidden; }
 
@@ -87,7 +83,7 @@ html.portrait #game-container  { visibility: hidden; }
   left: 0;
   right: 0;
   height: auto;
-  display: none;          /* shown by JS on touch devices */
+  display: none;
   justify-content: space-between;
   align-items: flex-end;
   padding: 8px 16px calc(10px + env(safe-area-inset-bottom, 0px));
@@ -131,6 +127,34 @@ html.portrait #game-container  { visibility: hidden; }
   transform: scale(0.92);
 }
 
+/* ── App install button ── */
+.app-btn {
+  position: fixed;
+  top: 8px;
+  right: 56px;
+  z-index: 200;
+  background: rgba(0,0,0,0.55);
+  border: 2px solid rgba(255,255,255,0.35);
+  color: #fff;
+  font-size: 18px;
+  width: 38px;
+  height: 38px;
+  border-radius: 8px;
+  cursor: pointer;
+  line-height: 30px;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  transition: background 0.1s;
+  display: none;
+}
+
+html.is-installable .app-btn {
+  display: block;
+}
+
+.app-btn:active { background: rgba(120,0,150,0.75); }
+
 /* ── Mute button (always visible top-right) ── */
 #mute-btn {
   position: fixed;
@@ -151,4 +175,5 @@ html.portrait #game-container  { visibility: hidden; }
   outline: none;
   transition: background 0.1s;
 }
+
 #mute-btn:active { background: rgba(100,0,150,0.7); }

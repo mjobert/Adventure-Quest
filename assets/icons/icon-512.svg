@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="Adventure Quest icon">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#12031d"/>
+      <stop offset="100%" stop-color="#2b0d44"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" x2="1">
+      <stop offset="0%" stop-color="#ffd65a"/>
+      <stop offset="100%" stop-color="#ff9a3c"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="72" fill="url(#bg)"/>
+  <path d="M120 344 L256 92 L392 344 H330 L256 206 L182 344 Z" fill="#7d2ae8" opacity="0.9"/>
+  <path d="M208 244 L256 170 L304 244 Z" fill="#ffd65a"/>
+  <rect x="176" y="290" width="160" height="64" rx="12" fill="#1d1131"/>
+  <rect x="220" y="124" width="72" height="72" rx="12" fill="#ffd65a"/>
+  <circle cx="256" cy="206" r="18" fill="#fff4d1"/>
+  <path d="M120 364 H392 L352 434 H160 Z" fill="#2a0d42"/>
+  <g fill="#cfe8ff">
+    <circle cx="148" cy="150" r="8"/>
+    <circle cx="364" cy="150" r="8"/>
+    <circle cx="256" cy="70" r="10"/>
+  </g>
+</svg>

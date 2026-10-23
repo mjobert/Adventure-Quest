@@ -3,14 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
-  <!-- Ask the browser / OS to lock to landscape on supported platforms -->
+  <meta name="theme-color" content="#12031d" />
+  <meta name="description" content="Adventure Quest: The Lost Kingdom — a retro platformer adventure game." />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Adventure Quest" />
   <meta name="screen-orientation" content="landscape" />
   <title>Adventure Quest: The Lost Kingdom</title>
+  <link rel="manifest" href="./manifest.webmanifest" />
+  <link rel="icon" href="./assets/icons/icon-192.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="./assets/icons/icon-192.svg" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Rotate-device overlay — shown via CSS when portrait on touch devices -->
   <div id="rotate-overlay">
     <div id="rotate-box">
       <div id="rotate-icon">📱</div>
@@ -21,21 +27,20 @@
   <div id="game-container">
     <canvas id="gameCanvas"></canvas>
 
-    <!-- Mobile Controls -->
     <div id="mobile-controls">
       <div id="mobile-left">
-        <button class="ctrl-btn" id="btn-left">◀</button>
-        <button class="ctrl-btn" id="btn-right">▶</button>
+        <button class="ctrl-btn" id="btn-left" aria-label="Move left">◀</button>
+        <button class="ctrl-btn" id="btn-right" aria-label="Move right">▶</button>
       </div>
       <div id="mobile-right">
-        <button class="ctrl-btn" id="btn-attack">⚔</button>
-        <button class="ctrl-btn" id="btn-jump">▲</button>
+        <button class="ctrl-btn" id="btn-attack" aria-label="Attack">⚔</button>
+        <button class="ctrl-btn" id="btn-jump" aria-label="Jump">▲</button>
       </div>
     </div>
   </div>
 
-  <!-- Mute toggle button — always accessible -->
-  <button id="mute-btn" title="Toggle music and sound effects">🔊</button>
+  <button id="install-btn" class="app-btn" title="Install app" aria-label="Install app">⬇</button>
+  <button id="mute-btn" title="Toggle music and sound effects" aria-label="Toggle music and sound effects">🔊</button>
 
   <script src="game.js"></script>
 </body>

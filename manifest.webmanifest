@@ -1,0 +1,25 @@
+{
+  "name": "Adventure Quest: The Lost Kingdom",
+  "short_name": "Adventure Quest",
+  "description": "A retro 2D platform adventure game with multiple levels, boss fights, and mobile controls.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0a1a",
+  "theme_color": "#12031d",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "./assets/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "./assets/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
